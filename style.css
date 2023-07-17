@@ -117,3 +117,43 @@ video
     width: 100%;
     z-index: 10;
 }
+#scroller
+{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+#scroller h4
+{
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    /* font-family: gilroy; */
+  margin-right: 10px;
+  color: transparent;
+  -webkit-text-stroke: 2px #95c11e;
+
+}
+#scroller-in
+{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name  : scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes scroll{
+    form{
+        transform: translateX(0);
+    }
+    to
+    {
+        translate: translateX(-100%);
+    }
+}
+#scroller::-webkit-scrollbar
+{
+    display: none;
+}
