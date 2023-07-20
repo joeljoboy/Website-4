@@ -10,6 +10,7 @@ html,body
 {
     height: 100%;
     width: 100%;
+    perspective: 800px;
 }
 #nav
 {
@@ -216,6 +217,7 @@ video
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    transition: all ease 0.6s;
 }
 #card1
 {
@@ -236,6 +238,12 @@ video
     background-color: #95c11e;
     padding: 30px;
     padding-top: 180px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.card:hover .overlay
+{
+    opacity: 1;
 }
 .overlay h4
 {
@@ -255,4 +263,74 @@ video
     color: #000;
     font-size: 18px;
     margin-bottom: 8px;
+}
+.card:hover
+{
+    transform: rotate3d(-1,1,0,20deg);
+}
+/* green banner */
+#green-div
+{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left bottom, #119f3a, #ace022); 
+}
+#green-div h4
+{
+    width: 45%;
+    line-height: 50px;
+    color: #000;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#green-div img
+{
+    height: 100%;
+    object-fit: cover;
+    width: 14% ;
+}
+/* page 3 */
+#page-3
+{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page-3>p
+{
+    font-size: 35px;
+    font-weight: 700;
+    width: 60%;
+    text-align: center;
+    line-height: 45px;
+}
+#page-3 img
+{
+    position: absolute;
+    height: 60px;
+}
+#page-3 #colon1
+{
+    left: 13%;
+    top: 20%;
+}
+#page-3 #colon2
+{
+    right: 13%;
+    bottom: 26%;
+}
+/* page 4 */
+#page-4
+{
+    background-color: red;
+    height: 50vh;
+    width: 100%;
 }
